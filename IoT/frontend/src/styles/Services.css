@@ -1,0 +1,35 @@
+/* Full Height Hero Section */
+.services-hero {
+    height: 50vh; /* Adjust height as needed */
+    background: linear-gradient(135deg, #007bff, #00c8ff); /* Gradient background */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  /* Services List */
+  .services-list {
+    background-color: #f8f9fa;
+  }
+  
+  .service-card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Footer */
+  footer {
+    background-color: #343a40;
+    color: #ffffff;
+    padding: 20px 0;
+  }
+  
