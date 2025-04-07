@@ -1,22 +1,30 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Home from './components/Home';
-import Services from './components/Services';
-import About from './components/About';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/common/Navbar';
+import Home from './components/pages/Home';
+import About from './components/pages/About';
+import Services from './components/pages/Services';
+import Contact from './components/pages/Contact';
+import Footer from './components/common/Footer';
+import ScrollToTop from './components/common/ScrollToTop';
+import './styles/App.css';
+import { AnimatePresence } from 'framer-motion';
 
-const App = () => {
+function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+      <main>
+        <AnimatePresence mode='wait'>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </AnimatePresence>
+      </main>
       <Footer />
     </Router>
   );

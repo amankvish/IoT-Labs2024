@@ -1,0 +1,138 @@
+.footer-modern {
+  background: radial-gradient(circle at top left, #1a1a2e, #121212);
+  color: #f0f0f0;
+  padding: 70px 20px 30px;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+.footer-brand {
+  max-width: 300px;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #fff;
+}
+
+.footer-logo img {
+  height: 40px;
+}
+
+.footer-brand p {
+  font-size: 0.95rem;
+  opacity: 0.8;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.footer-social {
+  display: flex;
+  gap: 12px;
+}
+
+.social-icon {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 10px;
+  border-radius: 50%;
+  display: inline-flex;
+  color: #fff;
+  transition: background 0.3s ease;
+}
+
+.social-icon:hover {
+  background: var(--primary);
+  color: #fff;
+  box-shadow: 0 0 10px var(--primary);
+}
+
+.footer-links h4 {
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.animated-link {
+  color: #f0f0f0;
+  position: relative;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.animated-link::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: var(--primary);
+  left: 0;
+  bottom: -3px;
+  transition: 0.4s ease;
+}
+
+.animated-link:hover::after {
+  width: 100%;
+}
+
+.animated-link:hover {
+  color: var(--primary);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 30px;
+  font-size: 0.85rem;
+  opacity: 0.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-inner {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .footer-brand,
+  .footer-links {
+    width: 100%;
+  }
+
+  .footer-brand {
+    text-align: center;
+  }
+
+  .footer-social {
+    justify-content: center;
+  }
+
+  .footer-links h4 {
+    text-align: center;
+  }
+
+  .footer-links ul {
+    text-align: center;
+  }
+}
