@@ -1,30 +1,38 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { FaMicrochip, FaRobot, FaShieldAlt, FaShoppingCart, FaArrowRight } from 'react-icons/fa';
-import Card from '../Card';
-import SectionTitle from '../SectionTitle';
-import '../../styles/Home.css';
+import React from "react";
+import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import {
+  FaMicrochip,
+  FaRobot,
+  FaShieldAlt,
+  FaShoppingCart,
+  FaArrowRight,
+} from "react-icons/fa";
+import Card from "../Card";
+import SectionTitle from "../SectionTitle";
+import "../../styles/Home.css";
 
 // Image imports
-import heroIllustration from '../../assets/images/hero-illustration.png';
-import iotChip from '../../assets/images/iot-chip.png';
-import smartHome from '../../assets/images/smart-home.png';
-import dataAnalytics from '../../assets/images/data-analytics.png';
-import iotDevices from '../../assets/images/iot-devices.jpg';
+import heroIllustration from "../../assets/images/hero-illustration.png";
+import iotChip from "../../assets/images/iot-chip.png";
+import smartHome from "../../assets/images/smart-home.png";
+import dataAnalytics from "../../assets/images/data-analytics.png";
+import iotDevices from "../../assets/images/iot-devices.jpg";
 
 const Home = () => {
   const services = [
     {
       icon: <FaMicrochip size={40} />,
       title: "IoT Solutions",
-      description: "Custom IoT systems for smart homes, industrial automation, and more.",
+      description:
+        "Custom IoT systems for smart homes, industrial automation, and more.",
       link: "/services#iot",
     },
     {
       icon: <FaRobot size={40} />,
       title: "Smart Environments",
-      description: "Deploy intelligent ecosystems with real-time monitoring and control.",
+      description:
+        "Deploy intelligent ecosystems with real-time monitoring and control.",
       link: "/services#smart",
     },
     {
@@ -36,7 +44,8 @@ const Home = () => {
     {
       icon: <FaShoppingCart size={40} />,
       title: "Retail Automation",
-      description: "Revolutionize customer experience with IoT-based retail tech.",
+      description:
+        "Revolutionize customer experience with IoT-based retail tech.",
       link: "/services#retail",
     },
   ];
@@ -54,7 +63,7 @@ const Home = () => {
               transition={{ duration: 0.8 }}
               className="hero-text"
             >
-              <motion.span 
+              <motion.span
                 className="subtitle"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -67,7 +76,8 @@ const Home = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3 }}
               >
-                Innovative <span className="gradient-text">IoT Solutions</span> for a Connected World
+                Innovative <span className="gradient-text">IoT Solutions</span>{" "}
+                for a Connected World
               </motion.h1>
               <motion.p
                 initial={{ opacity: 0, y: 20 }}
@@ -77,7 +87,7 @@ const Home = () => {
                 We design and implement cutting-edge IoT technologies to
                 transform your business operations and daily life.
               </motion.p>
-              <motion.div 
+              <motion.div
                 className="hero-buttons"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -91,7 +101,7 @@ const Home = () => {
                 </Link>
               </motion.div>
             </motion.div>
-            
+
             <motion.div
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
@@ -99,26 +109,42 @@ const Home = () => {
               className="hero-image"
             >
               <div className="image-container">
-                <img src={heroIllustration} alt="IoT Solutions" className="main-image" />
+                <img
+                  src={heroIllustration}
+                  alt="IoT Solutions"
+                  className="main-image"
+                />
                 <div className="floating-elements">
-                  <motion.div 
+                  <motion.div
                     className="element element-1"
                     animate={{ y: [0, -20, 0] }}
-                    transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+                    transition={{
+                      duration: 4,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }}
                   >
                     <img src={iotChip} alt="IoT Chip" />
                   </motion.div>
-                  <motion.div 
+                  <motion.div
                     className="element element-2"
                     animate={{ y: [0, 20, 0] }}
-                    transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+                    transition={{
+                      duration: 5,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }}
                   >
                     <img src={smartHome} alt="Smart Home" />
                   </motion.div>
-                  <motion.div 
+                  <motion.div
                     className="element element-3"
                     animate={{ y: [0, -15, 0] }}
-                    transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut" }}
+                    transition={{
+                      duration: 4.5,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                    }}
                   >
                     <img src={dataAnalytics} alt="Data Analytics" />
                   </motion.div>
@@ -142,7 +168,8 @@ const Home = () => {
             <span className="section-subtitle">What We Offer</span>
             <h2 className="section-title">Our Core Services</h2>
             <p className="section-description">
-              Empowering businesses with innovative IoT solutions that drive growth and efficiency
+              Empowering businesses with innovative IoT solutions that drive
+              growth and efficiency
             </p>
           </motion.div>
           <div className="services-grid">
@@ -185,7 +212,7 @@ const Home = () => {
         <div className="container">
           <SectionTitle>Why Choose Us</SectionTitle>
           <div className="features-container">
-            <motion.div 
+            <motion.div
               className="features-image"
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -197,7 +224,7 @@ const Home = () => {
                 <div className="image-overlay"></div>
               </div>
             </motion.div>
-            
+
             <div className="features-list">
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -211,10 +238,13 @@ const Home = () => {
                 </div>
                 <div className="feature-content">
                   <h3>Cutting-Edge Technology</h3>
-                  <p>We use the latest IoT technologies to deliver innovative solutions.</p>
+                  <p>
+                    We use the latest IoT technologies to deliver innovative
+                    solutions.
+                  </p>
                 </div>
               </motion.div>
-              
+
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -227,10 +257,12 @@ const Home = () => {
                 </div>
                 <div className="feature-content">
                   <h3>Secure Solutions</h3>
-                  <p>Security is our top priority in all IoT implementations.</p>
+                  <p>
+                    Security is our top priority in all IoT implementations.
+                  </p>
                 </div>
               </motion.div>
-              
+
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -243,7 +275,9 @@ const Home = () => {
                 </div>
                 <div className="feature-content">
                   <h3>Custom Development</h3>
-                  <p>Tailored solutions to meet your specific business needs.</p>
+                  <p>
+                    Tailored solutions to meet your specific business needs.
+                  </p>
                 </div>
               </motion.div>
             </div>
@@ -254,4 +288,4 @@ const Home = () => {
   );
 };
 
-export default Home;   
+export default Home;
